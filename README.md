@@ -1,6 +1,6 @@
-# Not my work
+# Not my job, but modified by me
 # async-race-api
-Api for "Async Race".
+Api for [Async Race](https://github.com/loki87by/async-race).
 
 ## Setup and Running
 
@@ -8,7 +8,7 @@ Api for "Async Race".
 - Clone this repo: `$ git clone https://github.com/loki87by/async-race-api.git`.
 - Go to downloaded folder: `$ cd async-race-api`.
 - Install dependencies: `$ npm install`.
-- Start server: `$ npm start`.
+- Start server: `$ npm start` or `$ node index.js`.
 - Now you can send requests to the address: `http://127.0.0.1:3000`.
 
 ## Usage

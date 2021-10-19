@@ -8,17 +8,17 @@ const db = {
             "id": 1,
         },
         {
-            "name": "BMW",
+            "name": "Kawasaki",
             "color": "#fede00",
             "id": 2,
         },
         {
-            "name": "Mersedes",
+            "name": "Daf",
             "color": "#6c779f",
             "id": 3,
         },
         {
-            "name": "Ford",
+            "name": "Boening",
             "color": "#ef3c40",
             "id": 4,
         },
@@ -54,17 +54,19 @@ server.get('/engine', (req, res) => {
     }
 
     const distance = 500000;
+
     if (status === 'drive') {
         const velocity = state.velocity[id];
 
         if (!velocity) return res.status(404).send('Engine parameters for car with such id was not found in the garage. Have you tried to set engine status to "started" before?');
+
         if (state.blocked[id]) return res.status(429).send('Drive already in progress. You can\'t run drive for the same car twice while it\'s not stopped.');
         
         state.blocked[id] = true;
 
         const x = Math.round(distance / velocity);
 
-        if (new Date().getMilliseconds() % 3 === 0) {
+        if (new Date().getMilliseconds() % 4 === 0) {
             setTimeout(() => {
                 delete state.velocity[id];
                 delete state.blocked[id];

@@ -1,4 +1,6 @@
 # Not my job, but modified by me
+# *(some requests may not be usage in frontend)*
+
 # async-race-api
 Api for [Async Race](https://github.com/loki87by/async-race).
 
